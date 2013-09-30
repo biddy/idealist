@@ -1,0 +1,17 @@
+{% extends "layouts/base.html" %}
+
+{% block page_title %} All Ideas | {% endblock %}
+
+{% block page_content %}
+<h2>Ideas</h2>
+
+<ul>
+  {% for title in unique %}
+  <li><a href={% url 'ideas:detail' title.slug %}>{{ title.title }}</a></li>
+  {% empty %}
+  <li>sorry no ideas</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
+
