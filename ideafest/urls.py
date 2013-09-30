@@ -8,3 +8,5 @@ urlpatterns = patterns('',
     url(r'^ideas/', include(nodes.urls, namespace='ideas')),
     url(r'^admin/', include(admin.site.urls)),
 )
+
+#testing github editting
